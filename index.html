@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Positioning</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header id="doc-header">
+      <h1 id="doc-title">CSS Positioning</h1>
+    </header>
+    <main>
+      <section id="box-static">
+        <h1 class="topic-title">1. Static (default behaviour)</h1>
+        <hr />
+        <div class="container">
+          <div class="box-1"><span>1. Static</span></div>
+          <div class="box-2"><span>1. Static</span></div>
+        </div>
+        <p>
+          The element is positioned according to the Normal Flow of the
+          document. The <code>top</code>, <code>right</code>,
+          <code>bottom</code>, <code>left</code>, and
+          <code>z-index</code> properties have <em>no effect</em>. This is the
+          default value.
+        </p>
+      </section>
+
+      <section id="box-relative">
+        <h1 class="topic-title">2. Relative</h1>
+        <hr />
+        <div class="container">
+          <div class="box-1"><span>2. Static</span></div>
+          <div class="box-2"><span>2. Relative</span></div>
+        </div>
+        <p>
+          The element is positioned according to the normal flow of the
+          document, and then offset relative to itself based on the values of
+          <code>top</code>, <code>right</code>, <code>bottom</code>, and
+          <code>left</code>. The offset does not affect the position of any
+          other elements; thus, the space given for the element in the page
+          layout is the same as if position were <code>static</code>.
+        </p>
+        <p>
+          This value creates a new stacking context when the value of
+          <code>z-index</code> is not <code>auto</code>. Its effect on
+          <code>table-*-group</code>, <code>table-row</code>,
+          <code>table-column</code>, <code>table-cell</code>, and
+          <code>table-caption</code> elements is undefined.
+        </p>
+      </section>
+
+      <section id="box-absolute">
+        <h1 class="topic-title">3. Absolute</h1>
+        <hr />
+        <div class="container">
+          <div class="box-1"><span>3.a. Static</span></div>
+          <div class="box-2"><span>3.a. Absolute</span></div>
+        </div>
+        <br />
+        <div class="container container-relative">
+          <div class="box-1"><span>3.b. Static</span></div>
+          <div class="box-2"><span>3.b. Absolute</span></div>
+        </div>
+        <p>
+          The element is removed from the normal document flow, and no space is
+          created for the element in the page layout. The element is positioned
+          relative to its closest positioned ancestor (if any) or to the initial
+          containing block. Its final position is determined by the values of
+          <code>top</code>, <code>right</code>, <code>bottom</code>, and
+          <code>left</code>.
+        </p>
+        <p>
+          This value creates a new stacking context when the value of
+          <code>z-index</code> is not <code>auto</code>. The margins of
+          absolutely positioned boxes do not collapse with other margins.
+        </p>
+      </section>
+
+      <section id="box-fixed">
+        <h1 class="topic-title">4. Fixed</h1>
+        <hr />
+        <div class="container">
+          <div class="box-1"><span>4. Static</span></div>
+          <div class="box-2"><span>4. Fixed</span></div>
+        </div>
+        <p>
+          The element is removed from the normal document flow, and no space is
+          created for the element in the page layout. The element is positioned
+          relative to its initial containing block, which is the viewport in the
+          case of visual media. Its final position is determined by the values
+          of <code>top</code>, <code>right</code>, <code>bottom</code>, and
+          <code>left</code>.
+        </p>
+        <p>
+          This value always creates a new stacking context. In printed
+          documents, the element is placed in the same position on
+          <em>every page</em>.
+        </p>
+      </section>
+
+      <section id="box-sticky">
+        <h1 class="topic-title">5. Sticky</h1>
+        <hr />
+        <div class="container">
+          <div class="box-1"><span>5.1. Static</span></div>
+          <div class="box-2"><span>5.1. Sticky</span></div>
+        </div>
+        <p>
+          The element is positioned according to the normal flow of the
+          document, and then offset relative to its nearest scrolling ancestor
+          and containing block (nearest block-level ancestor), including
+          table-related elements, based on the values of <code>top</code>,
+          <code>right</code>, <code>bottom</code>, and <code>left</code>. The
+          offset does not affect the position of any other elements.
+        </p>
+        <p>
+          This value always creates a new stacking context. Note that a sticky
+          element "sticks" to its nearest ancestor that has a "scrolling
+          mechanism" (created when <code>overflow</code> is <code>hidden</code>,
+          <code>scroll</code>, <code>auto</code>, or <code>overlay</code>), even
+          if that ancestor isn't the nearest actually scrolling ancestor.
+        </p>
+      </section>
+
+      <div id="box-sticky-with-no-parent">
+        <span>5.2. Sticky (with no parent element)</span>
+      </div>
+
+      <section class="random-p">
+        <h1>Random Paragraph (ignore this section)</h1>
+        <hr />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
+          quae modi, aperiam ipsam id debitis quisquam architecto praesentium
+          laboriosam sint asperiores, suscipit animi accusamus mollitia culpa
+          sapiente beatae ipsum esse.
+        </p>
+        <p>
+          Facere, nesciunt culpa sunt necessitatibus quibusdam perspiciatis vel,
+          laborum dolor doloremque corrupti repudiandae facilis soluta vitae!
+          Quo quasi vitae consectetur aliquam repudiandae iste! Impedit non ex
+          nihil aperiam praesentium explicabo!
+        </p>
+        <p>
+          Ratione quod ducimus laborum adipisci necessitatibus totam optio,
+          asperiores illum veniam cum voluptas eos iste exercitationem dolor
+          repellat similique minima provident. Nobis ullam saepe repellendus
+          delectus esse qui molestias aperiam.
+        </p>
+        <p>
+          Cupiditate quam ea sapiente, deserunt beatae quia esse voluptate natus
+          similique expedita, nostrum nam mollitia ducimus dolore praesentium
+          exercitationem sit amet doloribus quas saepe voluptates! Illo vero
+          perspiciatis dolorum sed.
+        </p>
+        <p>
+          Sequi ex, voluptatum sunt ullam neque obcaecati harum eum facere
+          debitis, vel blanditiis, eveniet similique id ut pariatur delectus
+          veritatis? Sapiente tempora quo sunt eaque, repellendus non laudantium
+          libero illum.
+        </p>
+        <p>
+          Velit iste dolorem architecto pariatur atque eum vero natus adipisci
+          sit laboriosam consectetur, quidem laudantium culpa commodi quis minus
+          ducimus vitae omnis. Repellat aliquam architecto ipsum atque! Quaerat,
+          deserunt asperiores.
+        </p>
+        <p>
+          Vel sunt necessitatibus iusto saepe illo porro totam sapiente ipsam,
+          obcaecati reiciendis. Ratione atque quas quasi! Eligendi quasi
+          quibusdam veritatis porro laborum non recusandae dolor voluptatibus
+          possimus cumque. Quam, at?
+        </p>
+        <p>
+          Ab ducimus molestias aliquid odit earum aut necessitatibus repellendus
+          sed reprehenderit, et commodi iste laboriosam consequuntur repellat
+          voluptate, error ipsum aspernatur veritatis ea. Optio dignissimos a
+          tempore amet eligendi quia?
+        </p>
+        <p>
+          Reprehenderit, facilis ipsam earum suscipit error, provident illum
+          nesciunt alias officiis excepturi aperiam? Sunt veniam ea maiores
+          magni. Facilis, laboriosam dignissimos! Temporibus iste nesciunt id,
+          dignissimos quaerat tenetur cupiditate mollitia!
+        </p>
+        <p>
+          Nostrum a sint quasi voluptatibus asperiores necessitatibus eaque?
+          Adipisci nulla ullam reprehenderit provident soluta quam voluptatem
+          voluptatum deserunt debitis facilis exercitationem modi, maiores
+          dolores quis? Quis vitae saepe ad dignissimos?
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

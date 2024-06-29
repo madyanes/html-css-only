@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+  background-color: whitesmoke;
+  padding: 20px 200px;
+}
+
+hr {
+  margin-bottom: 20px;
+}
+
+code {
+  font-family: monospace;
+}
+
+p {
+  background-color: cornflowerblue;
+  padding: 10px;
+}
+
+p:not(:first-of-type) {
+  margin-top: 10px;
+}
+
+.topic-title {
+  margin-bottom: 5px;
+}
+
+.container {
+  border: 1px dashed;
+}
+
+.container-relative {
+  position: relative;
+}
+
+.container > div {
+  border: 1px solid;
+}
+
+.random-p p {
+  background-color: burlywood;
+}
+
+#doc-header {
+  background-color: rgb(196, 56, 75);
+  padding: 20px 200px;
+}
+
+#doc-title {
+  color: rgb(182, 238, 233);
+}
+
+.box-1 {
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: skyblue;
+}
+
+.box-2 {
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+}
+
+#box-relative .box-2 {
+  position: relative;
+  top: -100px;
+  left: 50px;
+}
+
+#box-absolute .box-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#box-fixed .box-2 {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+#box-sticky .box-1 {
+  position: sticky;
+  top: 0;
+}
+
+#box-sticky .box-2 {
+  position: sticky;
+  bottom: 0;
+}
+
+#box-sticky-with-no-parent {
+  position: sticky;
+  bottom: 0;
+  top: 0;
+
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: crimson;
+}
